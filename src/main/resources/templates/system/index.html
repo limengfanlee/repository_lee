@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:include=" footer :: copyright"></div>
+
+<tr th:each="test:${test}">
+    <td th:if="${test.score} gt 0 and ${test.score} lt 60">差</td>
+    <td th:if="${test.score} ge 60 and ${test.score} le 70">中</td>
+    <td th:if="${test.score} gt 70 and ${test.score} le 80">良</td>
+    <td th:if="${test.score} gt 80 and ${test.score} le 90">优</td>
+    <td th:if="${test.score} gt 90 and ${test.score} le 100">超级优秀</td>
+
+
+</tr>
+
+<div th:utext="${msgUtext}"></div>
+<div th:text="${msgUtext}"></div>
+</body>
+</html>
