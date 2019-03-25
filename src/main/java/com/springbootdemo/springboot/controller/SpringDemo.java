@@ -63,4 +63,14 @@ public class SpringDemo {
         model.addAttribute("testBoolean",testBoolean);
         return  "hello";
     }
+
+
+    @RequestMapping("/lll")
+    public String lll(Model model){
+        boolean testBoolean = true;
+
+        model.addAttribute("name","sss");
+        model.addAttribute("testBoolean",testBoolean);
+        return  "hello";
+    }
 }
